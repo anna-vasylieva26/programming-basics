@@ -10,4 +10,4 @@ DNA_seq2 =input ("Enter DNA sequence: ")
 print (len(DNA_seq2))
 gc2 = (DNA_seq2.count("C") + DNA_seq2.count("G")) / len(DNA_seq2) * 100 
 gc2 = round(gc2, 2)
-print ("GC content of your DNA sequence is: ", gc2, "%")
+print("GC content of your DNA sequence is: ", gc2, "%")
