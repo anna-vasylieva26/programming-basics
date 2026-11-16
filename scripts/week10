@@ -1,0 +1,9 @@
+import pandas as pd
+df = pd.read_csv("data/samples.csv")
+print(df)
+print(df["length"].mean())
+print(df[df["organism"] == "Escherichia coli"])
+print(df[(df["gc_content"] > 40) & (df["length"] > 1000)])
+print(df.sort_values("gc_content", ascending=False).head(3))
+df["length_kb"] = df["length"] / 1000
+print(df)
