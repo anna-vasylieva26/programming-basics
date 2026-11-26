@@ -6,4 +6,6 @@ print(df[df["organism"] == "Escherichia coli"])
 print(df[(df["gc_content"] > 40) & (df["length"] > 1000)])
 print(df.sort_values("gc_content", ascending=False).head(3))
 df["length_kb"] = df["length"] / 1000
-print(df)
+print(df["organism"].value_counts())
+df.groupby("organism")["length"].max()
+df["organism"].value_counts()      # how many samples per organism
